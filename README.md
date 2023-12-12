@@ -1,6 +1,8 @@
 # Salifort_Motors_Employee_Retention_Project
 The Capstone project for the Google Advanced Data Analytics Certificate
 
+Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kaggle.com/datasets/leviiiest/salifort-motor-hr-dataset)
+
 ### Project Evaluation
 
 - The model has an accuracy of 98% for classifying Employee Churn.
