@@ -28,7 +28,7 @@ st.subheader('Employee Attrition Prediction App')
     A machine learning classification model was trained on the data and provides
     a prediction of leaving, the probability of leaving, as well as a categorical grouping of the employee.
     
-    **Employee Categories:**
+    #### Employee Categories:
     - Low Satisfaction/High Performer
     - Medium Satisfaction/Low Performer
     - High Satisfaction/Medium Performer
@@ -166,4 +166,10 @@ else:
 st.write(f'Probability of leaving: {round(100*probability_leave)}%')
 
 
-
+# categorize the employee
+if satisfacion_level > 0.7 and average_monthly_hours > 215 and average_monthly_hours < 275:
+    st.write('Employee is a High Satisfaction/Medium Performer')
+elif satisfacion_level < 0.1 and average_monthly_hours > 240:
+    st.write('Employee is a Low Satisfaction/High Performer')
+elif satisfacion_level > 0.35 and satisfacion_level < 0.45 and average_monthly_hours > 125 and average_monthly_hours < 165:
+    st.write('Employee is a Medium Satisfaction/Low Performer')
