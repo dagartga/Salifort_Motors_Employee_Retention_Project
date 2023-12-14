@@ -27,6 +27,8 @@ df = pd.read_csv('HR_capstone_dataset.csv')
 df.columns = df.columns.str.lower()
 # fix typo in monthly hours
 df = df.rename(columns={'average_montly_hours':'average_monthly_hours'})
+# drop duplicate rows
+df = df.drop_duplicates(keep='first')
 
 with st.sidebar.form("Employee Data"):
     department = st.selectbox(
