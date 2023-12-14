@@ -19,7 +19,7 @@ st_lottie(lottie_employee, speed=1, loop=True, height=200)
 st.title('Salifort Motors')
 st.subheader('Employee Attrition Prediction App')
 """
-    This app uses the data from the Google Advanced Data Analytics Capstone Project 
+    This app uses the data from the **Google Advanced Data Analytics Capstone Project** 
     to predict whether an employee will leave the fictitious car company, Salifort Motors.
     The data was collected from the HR department of Salifort Motors. The data contains information 
     about the employees, such as their salary, department, and number of projects they have worked on. 
@@ -27,6 +27,11 @@ st.subheader('Employee Attrition Prediction App')
     The data contains information on 14999 employees. 
     A machine learning classification model was trained on the data and provides
     a prediction of leaving, the probability of leaving, as well as a categorical grouping of the employee.
+    
+    **Employee Categories:**
+    - Low Satisfaction/High Performer
+    - Medium Satisfaction/Low Performer
+    - High Satisfaction/Medium Performer
     
 """
 
