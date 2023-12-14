@@ -29,9 +29,10 @@ st.subheader('Employee Attrition Prediction App')
     a prediction of leaving, the probability of leaving, as well as a categorical grouping of the employee.
     
     #### Employee Categories:
-    - Low Satisfaction/High Performer
-    - Medium Satisfaction/Low Performer
-    - High Satisfaction/Medium Performer
+    - **Low Satisfaction/High Performer**
+    - **Medium Satisfaction/Low Performer**
+    - **High Satisfaction/Medium Performer**
+    - **General Employee**
     
 """
 
@@ -49,7 +50,7 @@ col_names = ['satisfaction_level', 'last_evaluation', 'number_project',
        'average_monthly_hours', 'time_spend_company', 'work_accident', 'left',
        'promotion_last_5years', 'department', 'salary']
 
-with st.form("Employee Data"):
+with st.sidebar.form("Employee Data"):
     department = st.selectbox(
         "Department",
         options=df['department'].unique()
@@ -168,8 +169,12 @@ st.write(f'Probability of leaving: {round(100*probability_leave)}%')
 
 # categorize the employee
 if satisfacion_level > 0.7 and average_monthly_hours > 215 and average_monthly_hours < 275:
-    st.write('Employee is a High Satisfaction/Medium Performer')
-elif satisfacion_level < 0.1 and average_monthly_hours > 240:
-    st.write('Employee is a Low Satisfaction/High Performer')
+    employee_cat = 'High Satisfaction/Medium Performer'
+elif satisfacion_level < 0.2 and average_monthly_hours > 240:
+    employee_cat = 'Low Satisfaction/High Performer'
 elif satisfacion_level > 0.35 and satisfacion_level < 0.45 and average_monthly_hours > 125 and average_monthly_hours < 165:
-    st.write('Employee is a Medium Satisfaction/Low Performer')
+    employee_cat = 'Medium Satisfaction/Low Performer'
+else:
+    employee_cat = 'General Employee'
+    
+st.write(f'Employee Category: {employee_cat}')
