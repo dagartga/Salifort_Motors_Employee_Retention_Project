@@ -110,6 +110,19 @@ with tab1:
     
     """
     
+    st.write('The Employee Cohorts can be clearly seen in the plot below:')
+    
+    # look at the users who left with low satisfaction level and monthly hours
+    user_left = df[df['left'] == 1]
+    user_left.loc[:, 'left'] = 'Employee Left'
+    fig, ax = plt.subplots(figsize=(6, 4))
+    sns.scatterplot(data=user_left, x='average_monthly_hours', y='satisfaction_level', hue='number_project')
+    plt.title('Satisfaction Level/Monthly Hours/# of Projects for Employees Leaving', fontsize=12)
+    plt.xlabel('Average Monthly Hours')
+    plt.ylabel('Satisfaction Level')
+    plt.legend(bbox_to_anchor= (1.0, 0.5), title='Number of Projects')
+    st.pyplot(fig)
+    
 with tab2:
     st.subheader('Model Prediction')
     # Load model from file
