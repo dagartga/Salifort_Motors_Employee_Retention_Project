@@ -1,9 +1,11 @@
 import streamlit as st
 from streamlit_lottie import st_lottie
+import streamlit.components.v1 as components
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 from xgboost import XGBClassifier
+import shap
 import pickle
 import json
 
@@ -13,6 +15,7 @@ st.set_page_config(layout="wide")
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
         return json.load(f)
+    
 
 # load the lottie animation of a car driving
 lottie_employee = load_lottiefile("car_animation.json")
@@ -102,7 +105,7 @@ with tab1:
     A machine learning classification model was trained on the data and provides
     a prediction of leaving, the probability of leaving, as well as a categorical grouping of the employee.
     
-    #### Employee Categories:
+    #### Employee Leaving Categories:
     - **Low Satisfaction/High Performer**
     - **Medium Satisfaction/Low Performer**
     - **High Satisfaction/Medium Performer**
@@ -110,7 +113,7 @@ with tab1:
     
     """
     
-    st.write('The Employee Cohorts can be clearly seen in the plot below:')
+    st.write('The Employee Leaving Cohorts can be clearly seen in the plot below:')
     
     # look at the users who left with low satisfaction level and monthly hours
     user_left = df[df['left'] == 1]
@@ -202,6 +205,31 @@ with tab2:
         st.markdown('**Employee is predicted to stay**')
 
 
+    # explain the model's predictions using SHAP values
+    explainer = shap.TreeExplainer(best_model)
+    input_shap_values = explainer.shap_values(input_df)
+
+
+    # SHAP force plot for inputed instance predicted class
+    st.subheader('Explained Prediction - SHAP Value Plot')
+
+
+    force_plot = shap.force_plot(explainer.expected_value,
+                    input_shap_values ,
+                    input_df.columns,
+                    matplotlib=True,
+                    show=False)
+    st.pyplot(force_plot, bbox_inches='tight', dpi=300)
+    
+    
+    # SHAP force plot for inputed instance predicted class
+    fig, ax = plt.subplots()
+    shap.summary_plot(input_shap_values, input_df, plot_type="bar", show=False)
+    plt.title('Feature Importance on Model Prediction', fontsize=14)
+    plt.xlabel('')
+    st.pyplot(fig)
+    
+
 
 
 with tab3:
@@ -209,6 +237,33 @@ with tab3:
     """
     The following are visualizations of distribution of **All Employees vs the Input Employee**
     """
+    
+          
+    st.write('The Employee Leaving Cohorts can be clearly seen in the plot below:')
+    
+    # look at the users who left with low satisfaction level and monthly hours
+    employee_df = df.copy()
+    employee_df['left'] = employee_df['left'].apply(lambda x: 'Employee Left' if x == 1 else 'Employee Stayed')
+    # randomly sample 1000 rows to make the plot more readable
+    employee_df = employee_df.sample(1000, random_state=42)
+    # concat the input employee data
+    input_df['left'] = 'Input Employee'
+    employee_df = pd.concat([employee_df, input_df])
+        
+    # Define a color palette dictionary
+    colors = {'Employee Left': 'blue', 'Employee Stayed': 'grey', 'Input Employee': 'red'}
+        
+    # plot the results
+    fig, ax = plt.subplots(figsize=(6, 4))
+    sns.scatterplot(data=employee_df, x='average_monthly_hours', y='satisfaction_level', hue='left', palette=colors)
+    plt.title('Satisfaction Level and Monthly Hours for Employees', fontsize=12)
+    plt.xlabel('Average Monthly Hours')
+    plt.ylabel('Satisfaction Level')
+    plt.legend(bbox_to_anchor= (1.0, 0.5), title='Employee Classification')
+    st.pyplot(fig)
+
+
+    
     col1, col2 = st.columns(2)
     with col1:
         fig, ax = plt.subplots()
@@ -219,7 +274,7 @@ with tab3:
         st.pyplot(fig)
         
         fig, ax = plt.subplots()
-        sns.histplot(df['number_project'], ax=ax, label='All Employees')
+        sns.histplot(df['number_project'], ax=ax, label='All Employees', bins=df['number_project'].nunique())
         plt.axvline(number_of_projects, color='red', label='Input Employee Data')
         plt.title('Number of Projects')
         plt.ylabel('Number of Employees')
@@ -238,4 +293,4 @@ with tab3:
         plt.title('Average Monthly Hours')
         plt.ylabel('Number of Employees')
         st.pyplot(fig)
-
+  
