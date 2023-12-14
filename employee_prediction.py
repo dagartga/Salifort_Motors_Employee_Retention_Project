@@ -1,12 +1,35 @@
 import streamlit as st
+from streamlit_lottie import st_lottie
 import pandas as pd
 from xgboost import XGBClassifier
 import pickle
 import json
 
+
+# load the lottie json file
+def load_lottiefile(filepath: str):
+    with open(filepath, "r") as f:
+        return json.load(f)
+
+# load the lottie animation of a car driving
+lottie_employee = load_lottiefile("car_animation.json")
+st_lottie(lottie_employee, speed=1, loop=True, height=200)
+
 # print the title for the app
-st.title('Employee Attrition Prediction')
-st.write('This app predicts the probability of employee attrition for Salifort Motors')
+st.title('Salifort Motors')
+st.subheader('Employee Attrition Prediction App')
+"""
+    This app uses the data from the Google Advanced Data Analytics Capstone Project 
+    to predict whether an employee will leave the fictitious car company, Salifort Motors.
+    The data was collected from the HR department of Salifort Motors. The data contains information 
+    about the employees, such as their salary, department, and number of projects they have worked on. 
+    The data also contains information about whether the employee left the company or not. 
+    The data contains information on 14999 employees. 
+    A machine learning classification model was trained on the data and provides
+    a prediction of leaving, the probability of leaving, as well as a categorical grouping of the employee.
+    
+"""
+
 
 
 # get the columns and unique data for the dataset
@@ -79,20 +102,6 @@ best_model = XGBClassifier()
 best_model.load_model(filename)
 
 
-# to delete later
-satisfacion_level = 0.2
-last_evaluation = 0.9
-number_of_projects = 7
-average_monthly_hours = 260
-time_spend_company = 5
-work_accident = 'No'
-promotion_last_5years = 'No'
-department = 'sales'
-salary = 'low'
-
-
-
-
 # create the dataframe from user input
 input_df = pd.DataFrame([{col_names[0]:satisfacion_level, 
                           col_names[1]:last_evaluation, 
@@ -147,5 +156,9 @@ prediction = best_model.predict(input_df)
 # print the prediction to the streamlit app
 if prediction == 1:
     st.write('Employee is predicted to leave')
-st.write(f'Probability of leaving: {probability_leave}')
+else:
+    st.write('Employee is predicted to stay')
+st.write(f'Probability of leaving: {round(100*probability_leave)}%')
+
+
 
