@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from xgboost import XGBClassifier
 import pickle
+import json
 
 # print the title for the app
 st.title('Employee Attrition Prediction')
