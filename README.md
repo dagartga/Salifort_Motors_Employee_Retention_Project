@@ -59,3 +59,13 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
 
 ![Employee_Target](./images/employee_target_pie_chart.png)
 
+### Employee Leaving Cohorts
+
+![Employees_Leaving](./images/employee_left_scatterpot.png)
+
+
+### Employee Staying
+
+![Employees_Staying](./images/employee_stay_scatterplot.png)
+
+
