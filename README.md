@@ -150,9 +150,8 @@ For this case, **False Negatives are more important that False Positives**, beca
     - Number of Estimators, Max Features, Min Samples Split, Max Depth, Class Weight
 - XGBoost
     - Learning Rate, Number of Estimators, Max Depth, Min Child Weight, Subsample, Scale Positive Weight
-
-
-**Final Model Parameters:**
+  
+### Final Model Parameters:
 - XGBoost Tuned All Features
     - Learning Rate: 0.046
     - Number of Estimators: 276
@@ -162,12 +161,14 @@ For this case, **False Negatives are more important that False Positives**, beca
     - Scale Positive Weight: 3
 
 
+## Model Performance Comparison
+
+![model_comparison_recall](./images/model_comparison_recall.png)
+
+![model_comparison_f1](./images/model_comparison_f1.png)
+
+![model_comparison_roc_auc](./images/model_comparison_roc_auc.png)
+
+
+## Final Model Decision
 **The XGBoost Tuned All Features model was chosen because it had the best Recall score while also having the highest F1 score**
-
-#### Model Performance Comparison
-
-![model_comparison_recall]('./images/model_comparison_recall.png)
-
-![model_comparison_f1]('./images/model_comparison_f1.png)
-
-![model_comparison_roc_auc]('./images/model_comparison_roc_auc.png)
