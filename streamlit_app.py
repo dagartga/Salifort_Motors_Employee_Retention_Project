@@ -9,7 +9,7 @@ import shap
 import pickle
 import json
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout='centered')
 
 # load the lottie json file
 def load_lottiefile(filepath: str):
@@ -18,14 +18,14 @@ def load_lottiefile(filepath: str):
     
 
 # load the lottie animation of a car driving
-lottie_employee = load_lottiefile("car_animation.json")
+lottie_employee = load_lottiefile("./streamlit_data/car_animation.json")
 st_lottie(lottie_employee, speed=1, loop=True, height=200)
 
 # print the title for the app
 st.title('Salifort Motors')
 
 # get the columns and unique data for the dataset
-df = pd.read_csv('HR_capstone_dataset.csv')
+df = pd.read_csv('./data/HR_capstone_dataset.csv')
 # change the column names to lower case
 df.columns = df.columns.str.lower()
 # fix typo in monthly hours
@@ -129,7 +129,7 @@ with tab1:
 with tab2:
     st.subheader('Model Prediction')
     # Load model from file
-    filename = 'best_model.json'
+    filename = './models/best_model.json'
     best_model = XGBClassifier()
     best_model.load_model(filename)
 
@@ -167,7 +167,7 @@ with tab2:
 
 
     # load the columns from the json file
-    with open('model_cols.json', 'r') as f:
+    with open('./streamlit_data/model_cols.json', 'r') as f:
         all_columns = json.load(f)
 
     # find the missing columns
