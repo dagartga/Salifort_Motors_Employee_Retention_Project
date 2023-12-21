@@ -59,6 +59,23 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
 
 ![Employee_Target](./images/employee_target_pie_chart.png)
 
+
+### Pairplot Analysis
+
+
+This is very insightful and by using the hue set to the target, there are some very significant patterns viewable.
+
+-  **Satisfaction Level:**
+    - If the satisfaction level is low, then the employee tends to leave.
+- **Number of Projects:**
+    - If the number of projects is high, then the employee tends to leave.
+- **Average Monthly Hours:**
+    - If the number of average monthly hours is high, then the employee tends to leave.
+- **Time Spend at the Company:**
+    - The employees who leave, tend to be 5 for fewer years with a combination of either high number of projects or high number of average monthly hours or very low satisfaction level.
+
+
+
 ### Employee Leaving Cohorts
 **When looking at the scatterplot below, there are three cohorts of employees can be seen to leave the company in a higher probability than the average employee.**
 
