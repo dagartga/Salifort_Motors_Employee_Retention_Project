@@ -1,7 +1,8 @@
 # Salifort_Motors_Employee_Retention_Project
 The Capstone project for the Google Advanced Data Analytics Certificate
 
-#### View the Interactive Web App Here: [Salifort Motors Project Web App](https://salifort-motors-employee-retention.streamlit.app/)
+#### View the Interactive Web App Here: 
+[Salifort Motors Project Web App](https://salifort-motors-employee-retention.streamlit.app/)
 ![Streamlit_App](./images/salifort_web_app_screenshot.png)
 
 Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kaggle.com/datasets/leviiiest/salifort-motor-hr-dataset)
