@@ -18,7 +18,7 @@ def load_lottiefile(filepath: str):
     
 
 # load the lottie animation of a car driving
-lottie_employee = load_lottiefile("./streamlit_data/car_animation.json")
+lottie_employee = load_lottiefile("car_animation.json")
 st_lottie(lottie_employee, speed=1, loop=True, height=200)
 
 # print the title for the app
