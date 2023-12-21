@@ -96,9 +96,9 @@ tab1, tab2, tab3 = st.tabs(['Overview', 'Model Prediction', 'Data Visualizations
 with tab1:
     st.subheader('Employee Attrition Prediction App')
     """
-    ** How to use this app: **
+    **How to use this app:**
     1. Enter the employee data in the sidebar
-    2. Click the submit button
+    2. Click the Submit button
     3. View the Employee Retention Prediction in the Model Prediction tab
     4. View the employee's data compared to all employees in the Data Visualizations tab
     
