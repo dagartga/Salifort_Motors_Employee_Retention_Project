@@ -98,7 +98,7 @@ with tab1:
     """
     **How to use this app:**
     1. Enter the employee data in the sidebar
-    2. Click the submit button
+    2. Click the Submit button
     3. View the Employee Retention Prediction in the Model Prediction tab
     4. View the employee's data compared to all employees in the Data Visualizations tab
     
