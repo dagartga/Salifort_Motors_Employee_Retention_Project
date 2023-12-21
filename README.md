@@ -59,9 +59,15 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
 
 ![Employee_Target](./images/employee_target_pie_chart.png)
 
+#### Adjustments for Imbalanced Target:
+1. Use hyperparameter to use weights for balancing
+    - **XGBoost:** scale_pos_weight
+    - **RandomForest:** class_weight 
+2. Stratify data by target on all splits
 
 ### Pairplot Analysis
 
+![Employee_Pairplot](./images/pairplot.png)
 
 This is very insightful and by using the hue set to the target, there are some very significant patterns viewable.
 
@@ -90,3 +96,11 @@ This is very insightful and by using the hue set to the target, there are some v
 ## Feature Engineering
 
 - **One of the cohorts with high likelihood of leaving is the group that work >240 monthly hours, have a high evaluation score, but low satisfaction. To better express this relationship between long hours and high evaluation score but low satisfaction, a formula is implemented to turn this relationship into a numeric value.**
+
+### New Features: 
+1. **Over Worked High Performer:** (number of projects X number of monthly hours X evaluation score) / satisfaction score
+2. **Over 4 Years No Promotion:** if an employee has worked more than 4 years not had a promotion. This eliminates the newer employees who would not be expected to get a promotion.
+
+### Over Worked High Performer Visualization
+
+![over_worked_viz](./images/overworked_low_satisfaction.png)
