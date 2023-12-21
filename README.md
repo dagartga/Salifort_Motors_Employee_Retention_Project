@@ -106,6 +106,11 @@ This is very insightful and by using the hue set to the target, there are some v
 ### Feature Importance
 ![model_feature_importance](./images/xgboost_feat_imp.png)
 
+**Key Takeaways:**
+- **Average Monthly Hours** has the **most impact** on retention and if an employee is predicted to leave then the hours of the employee should be viewed to see if they are **over-worked** and then reduce the hours if so.
+- **Over Worked High Performer** is a feature that takes into account the **hours, project, satisfaction, and performance review**. A **high score** means that an employee does **lots of good work** but is **not satisfied**. This assigns value to the employee and if a predicted to leave employee has a high Over Worked High Performer score, they should be aggressively target for retention.
+-  
+
 ### Model Performance:
 
 Final Model: **XGBoost Classifier with All Features**
