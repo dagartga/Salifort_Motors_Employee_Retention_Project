@@ -96,6 +96,13 @@ tab1, tab2, tab3 = st.tabs(['Overview', 'Model Prediction', 'Data Visualizations
 with tab1:
     st.subheader('Employee Attrition Prediction App')
     """
+    ** How to use this app: **
+    1. Enter the employee data in the sidebar
+    2. Click the submit button
+    3. View the Employee Retention Prediction in the Model Prediction tab
+    4. View the employee's data compared to all employees in the Data Visualizations tab
+    
+    ### Project Overview
     This app uses the data from the **Google Advanced Data Analytics Capstone Project** 
     to predict whether an employee will leave the fictitious car company, Salifort Motors.
     The data was collected from the HR department of Salifort Motors. The data contains information 
