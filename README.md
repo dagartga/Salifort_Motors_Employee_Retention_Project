@@ -61,7 +61,7 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
 
 
 ### Pairplot Analysis
-
+![Employee_Pairplot](./images/pairplot.png)
 
 This is very insightful and by using the hue set to the target, there are some very significant patterns viewable.
 
