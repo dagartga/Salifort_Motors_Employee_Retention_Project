@@ -70,3 +70,6 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
 
 ![Employees_Staying](./images/employee_stay_scatterplot.png)
 
+## Feature Engineering
+
+- **One of the cohorts with high likelihood of leaving is the group that work >240 monthly hours, have a high evaluation score, but low satisfaction. To better express this relationship between long hours and high evaluation score but low satisfaction, a formula is implemented to turn this relationship into a numeric value.**
