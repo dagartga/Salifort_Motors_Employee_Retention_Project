@@ -107,11 +107,16 @@ This is very insightful and by using the hue set to the target, there are some v
 ![model_feature_importance](./images/xgboost_feat_imp.png)
 
 **Key Takeaways:**
-- **Average Monthly Hours** has the **most impact** on retention and if an employee is predicted to leave then the hours of the employee should be viewed to see if they are **over-worked** and then reduce the hours if so.
-- **Over Worked High Performer** is a feature that takes into account the **hours, project, satisfaction, and performance review**. A **high score** means that an employee does **lots of good work** but is **not satisfied**. This assigns value to the employee and if a predicted to leave employee has a high Over Worked High Performer score, they should be aggressively target for retention.
--  
+- **Average Monthly Hours**
+    - This feature has the **most impact** on retention and if an employee is predicted to leave then the hours of the employee should be viewed to see if they are **over-worked** and then reduce the hours if so.
+- **Over Worked High Performer**
+    - This feature takes into account the **hours, project, satisfaction, and performance review**. A **high score** means that an employee does **lots of good work** but is **not satisfied**. This assigns value to the employee and if a predicted to leave employee has a high Over Worked High Performer score, they should be aggressively target for retention.
+- **Last Evaluation and Satisfaction Level**
+    - While these two are expressed in the Over Worked High Performer, this plot shows that they are main contributors to employee leaving. There is a cohort of users who leave who have high satisfaction and a low evaluation score, so they can be identified with this combination of features.
+- **Over 4 Years No Promotion**
+    -  This feature **does not score high**. Therefor, it may be **less useful to offer a promotion** than to **reduce projects or hours**. But as noticed in the EDA, the distribution of **promotion data is very imbalanced** and **the signal may not strong enough**. Therefor, managers may want to offer the option of either a promotion or a reduced workload. 
 
-### Model Performance:
+###  Model Performance:
 
 Final Model: **XGBoost Classifier with All Features**
 
