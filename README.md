@@ -160,8 +160,6 @@ For this case, **False Negatives are more important that False Positives**, beca
     - Subsample: 0.765
     - Scale Positive Weight: 3
 
-## Final Model Decision
-**The XGBoost Tuned All Features model was chosen because it had the best Recall score while also having the highest F1 score**
 
 ## Model Performance Comparison
 
@@ -170,3 +168,7 @@ For this case, **False Negatives are more important that False Positives**, beca
 ![model_comparison_f1](./images/model_comparison_f1.png)
 
 ![model_comparison_roc_auc](./images/model_comparison_roc_auc.png)
+
+
+## Final Model Decision
+**The XGBoost Tuned All Features model was chosen because it had the best Recall score while also having the highest F1 score**
