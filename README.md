@@ -15,6 +15,7 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
  
 
 ### There are three main groups of employees who are likely to leave:
+
 1. **Low Satisfaction/High Performers:**
     - 4-5 years with the company but not promotion
     - Average Monthly Hours greater than 240
