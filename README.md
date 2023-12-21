@@ -5,7 +5,7 @@ The Capstone project for the Google Advanced Data Analytics Certificate
 
 Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kaggle.com/datasets/leviiiest/salifort-motor-hr-dataset)
 
-### Project Evaluation
+## Project Evaluation
 
 - **Model Accuracy:**
    -  98% for classifying Employee Churn.
@@ -14,7 +14,7 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
    - 93% of the time, the model will correctly predict the employees who will leave.
  
 
-- There are three main groups of employees who are likely to leave:
+### There are three main groups of employees who are likely to leave:
     - **Low Satisfaction/High Performers:**
         - 4-5 years with the company but not promotion
         - Average Monthly Hours greater than 240
