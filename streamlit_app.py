@@ -174,7 +174,7 @@ with tab2:
 
 
     # load the columns from the json file
-    with open('./streamlit_data/model_cols.json', 'r') as f:
+    with open('./models/model_cols.json', 'r') as f:
         all_columns = json.load(f)
 
     # find the missing columns
