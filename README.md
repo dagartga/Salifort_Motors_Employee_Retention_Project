@@ -48,6 +48,45 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
        
 
 
-#### Concluding Statement:
+#### Model Use Case:
 
 **This model can predict employees that are likely to leave. Then the employee can be grouped into these three categories and managers can propose better changes that will positively impact the employee.**
+
+
+## Exploratory Data Analysis:
+
+### Imbalanced Target
+
+![Employee_Target](./images/employee_target_pie_chart.png)
+
+
+### Pairplot Analysis
+
+
+This is very insightful and by using the hue set to the target, there are some very significant patterns viewable.
+
+-  **Satisfaction Level:**
+    - If the satisfaction level is low, then the employee tends to leave.
+- **Number of Projects:**
+    - If the number of projects is high, then the employee tends to leave.
+- **Average Monthly Hours:**
+    - If the number of average monthly hours is high, then the employee tends to leave.
+- **Time Spend at the Company:**
+    - The employees who leave, tend to be 5 for fewer years with a combination of either high number of projects or high number of average monthly hours or very low satisfaction level.
+
+
+
+### Employee Leaving Cohorts
+**When looking at the scatterplot below, there are three cohorts of employees can be seen to leave the company in a higher probability than the average employee.**
+
+![Employees_Leaving](./images/employee_left_scatterplot.png)
+
+
+### Employee Staying
+**When looking at employees who stay, there is fairly evenly distributed scatter among these same characteristics. This signifies these three cohorts are significant.**
+
+![Employees_Staying](./images/employee_stay_scatterplot.png)
+
+## Feature Engineering
+
+- **One of the cohorts with high likelihood of leaving is the group that work >240 monthly hours, have a high evaluation score, but low satisfaction. To better express this relationship between long hours and high evaluation score but low satisfaction, a formula is implemented to turn this relationship into a numeric value.**
