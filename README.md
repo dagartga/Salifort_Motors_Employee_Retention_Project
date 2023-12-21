@@ -1,5 +1,8 @@
 # Salifort_Motors_Employee_Retention_Project
-The Capstone project for the Google Advanced Data Analytics Certificate
+#### Model Use Case:
+
+This model can predict employees that are likely to leave. Then any high risk employees can be grouped into one of the three high-risk cohorts and managers can propose changes, such as a promotion or reduced hours, that will positively impact the employee.
+
 
 #### View the Interactive Web App Here: 
 [Salifort Motors Project Web App](https://salifort-motors-employee-retention.streamlit.app/)
@@ -45,12 +48,7 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
 
 - **Recommenation:** These employees are valuable to the company. They have been at the company a long time and likely have a lot of knowledge of company practices. Without a promotion, they are likely to leave. They are not overworked so their workload should not be redistributed. By offering a promotion, their likelihood of leaving will be reduced.
        
-       
-
-
-#### Model Use Case:
-
-**This model can predict employees that are likely to leave. Then the employee can be grouped into these three categories and managers can propose better changes that will positively impact the employee.**
+  
 
 
 ## Exploratory Data Analysis:
