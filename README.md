@@ -48,6 +48,14 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
        
 
 
-#### Concluding Statement:
+#### Model Use Case:
 
 **This model can predict employees that are likely to leave. Then the employee can be grouped into these three categories and managers can propose better changes that will positively impact the employee.**
+
+
+## Exploratory Data Analysis:
+
+### Imbalanced Target
+
+![Employee_Target](./images/employee_target_pie_chart.png)
+
