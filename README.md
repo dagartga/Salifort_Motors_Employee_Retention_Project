@@ -7,11 +7,12 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
 
 ### Project Evaluation
 
-- The model has an accuracy of 98% for classifying Employee Churn.
+- **Model Accuracy:**
+   -  98% for classifying Employee Churn.
 
-- The model is fairly balanced in its predictions despite an imbalanced proportion of employees who leave.
-
-- 93% of the time, the model will correctly predict the employees who will leave.
+- **Model Recall:**
+   - 93% of the time, the model will correctly predict the employees who will leave.
+ 
 
 - There are three main groups of employees who are likely to leave:
     - **Low Satisfaction/High Performers:**
