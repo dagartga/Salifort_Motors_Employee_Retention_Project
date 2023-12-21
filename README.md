@@ -60,12 +60,13 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
 ![Employee_Target](./images/employee_target_pie_chart.png)
 
 #### Adjustments for Imbalanced Target:
-- Use hyperparameter to use weights for balancing
+1. Use hyperparameter to use weights for balancing
     - **XGBoost:** scale_pos_weight
     - **RandomForest:** class_weight 
-- Stratify data by target on all splits
+2. Stratify data by target on all splits
 
 ### Pairplot Analysis
+
 ![Employee_Pairplot](./images/pairplot.png)
 
 This is very insightful and by using the hue set to the target, there are some very significant patterns viewable.
