@@ -103,9 +103,12 @@ This is very insightful and by using the hue set to the target, there are some v
 - **Recommendation:** These employees are valuable to the company. They have been at the company a long time and likely have a lot of knowledge of company practices. Without a promotion, they are likely to leave. They are not overworked so their workload should not be redistributed. By offering a promotion, their likelihood of leaving will be reduced.
 
 
+### Feature Importance
+![model_feature_importance](./images/xgboost_feat_imp.png)
+
 ### Model Performance:
 
-Final Model: **XGBoost Classifier**
+Final Model: **XGBoost Classifier with All Features**
 
 #### Confusion Matrix on Test Set
 ![confusion_matrix](./images/best_model_confusion_matrix.png)
