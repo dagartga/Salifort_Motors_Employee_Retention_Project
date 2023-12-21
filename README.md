@@ -166,8 +166,8 @@ For this case, **False Negatives are more important that False Positives**, beca
 
 #### Model Performance Comparison
 
-![model_comparison_recall]('./images/model_comparison_recall.png)
+![model_comparison_recall](./images/model_comparison_recall.png)
 
-![model_comparison_f1]('./images/model_comparison_f1.png)
+![model_comparison_f1](./images/model_comparison_f1.png)
 
-![model_comparison_roc_auc]('./images/model_comparison_roc_auc.png)
+![model_comparison_roc_auc](./images/model_comparison_roc_auc.png)
