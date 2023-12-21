@@ -60,6 +60,11 @@ This is very insightful and by using the hue set to the target, there are some v
 
 ![Employees_Staying](./images/employee_stay_scatterplot.png)
 
+### Promotion in the Last 5 Years
+**There are very few employees who have gotten a promotion in the last 5 years, as can be seen in the plot below. Perhaps it needs to be adjusted for just employees who have been at the company for 5 years or more to have real significance. Because new employees would not be expected to have a promotion.**
+
+![Employee_Promotion](./images/employee_promotion_last_5years.png)
+
 ## Feature Engineering
 
 - **One of the cohorts with high likelihood of leaving is the group that work >240 monthly hours, have a high evaluation score, but low satisfaction. To better express this relationship between long hours and high evaluation score but low satisfaction, a formula is implemented to turn this relationship into a numeric value.**
@@ -122,3 +127,5 @@ Final Model: **XGBoost Classifier with All Features**
 
 #### Confusion Matrix on Test Set
 ![confusion_matrix](./images/best_model_confusion_matrix.png)
+
+
