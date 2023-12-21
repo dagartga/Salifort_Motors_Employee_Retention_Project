@@ -123,9 +123,51 @@ This is very insightful and by using the hue set to the target, there are some v
 
 ###  Model Performance:
 
-Final Model: **XGBoost Classifier with All Features**
+Final Model: **Tuned XGBoost Classifier with All Features**
 
 #### Confusion Matrix on Test Set
 ![confusion_matrix](./images/best_model_confusion_matrix.png)
 
 
+**From the Confusion Matrix it can be seen that the Accuracy is 98%**
+
+#### Recall Prioritized Over Precision
+For this case, **False Negatives are more important that False Positives**, because **losing an employee means a lot of extra work and down time**. A current employee is already trained and familiar with company best practices. When an employee leaves, there may be days or weeks or longer, where there position is unfilled and HR is looking for a suitable candidate. Thus optimizing for very few False Negatives is more important in this scenario. The cost of a False Positive is that the manager will adjust the workload for the employee and possibly give a promotion. **This should be a lower cost than jarring transition of finding and training a new hire.**
+
+#### Overview of Models Compared
+- Random Forest
+   - Default
+   - Hyperparameters Tuned
+   - Hyperparameters Tuned and Features with Department and Promotion are removed 
+- XGBoost
+   - Default
+   - Hyperparameters Tuned
+   - Hyperparameters Tuned and Features with Department and Promotion are removed
+
+
+#### Hyperparameters Tuned
+- Random Forest
+    - Number of Estimators, Max Features, Min Samples Split, Max Depth, Class Weight
+- XGBoost
+    - Learning Rate, Number of Estimators, Max Depth, Min Child Weight, Subsample, Scale Positive Weight
+
+
+**Final Model Parameters:**
+- XGBoost Tuned All Features
+    - Learning Rate: 0.046
+    - Number of Estimators: 276
+    - Max Depth: 15 
+    - Min Child Weight: 1
+    - Subsample: 0.765
+    - Scale Positive Weight: 3
+
+
+**The XGBoost Tuned All Features model was chosen because it had the best Recall score while also having the highest F1 score**
+
+#### Model Performance Comparison
+
+![model_comparison_recall]('./images/model_comparison_recall.png)
+
+![model_comparison_f1]('./images/model_comparison_f1.png)
+
+![model_comparison_roc_auc]('./images/model_comparison_roc_auc.png)
