@@ -60,12 +60,13 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
 ![Employee_Target](./images/employee_target_pie_chart.png)
 
 ### Employee Leaving Cohorts
+**When looking at the scatterplot below, there are three cohorts of employees can be seen to leave the company in a higher probability than the average employee.**
 
-![Employees_Leaving](./images/employee_left_scatterpot.png)
+![Employees_Leaving](./images/employee_left_scatterplot.png)
 
 
 ### Employee Staying
+**When looking at employees who stay, there is fairly evenly distributed scatter among these same characteristics. This signifies these three cohorts are significant.**
 
 ![Employees_Staying](./images/employee_stay_scatterplot.png)
-
 
