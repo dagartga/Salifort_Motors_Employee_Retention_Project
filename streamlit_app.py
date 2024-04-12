@@ -242,7 +242,7 @@ with tab2:
 with tab3:
     st.subheader('Data Visualizations')
     """
-    The following are visualizations of distribution of **All Employees vs the Input Employee**
+    The following are visualizations of the distributions of **All Employees vs the Input Employee**
     """
     
           
