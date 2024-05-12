@@ -76,11 +76,11 @@ with st.sidebar.form("Employee Data"):
     )
     promotion_last_5years = st.selectbox(
         "Promotion in Last 5 Years",
-        options=['Yes', 'No']
+        options=['No', 'Yes']
     )
     work_accident = st.selectbox(
         "Work Accident",
-        options=['Yes', 'No']
+        options=['No', 'Yes']
     )
     
     st.form_submit_button("Submit")
