@@ -17,7 +17,7 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
    -  98% for classifying Employee Churn.
 
 - **Final Model Recall:**
-   - 93% of the time, the model will correctly predict the employees who will leave.
+   - 93% of the time the model will correctly predict the employees who will leave.
  
 
 ## Exploratory Data Analysis:
