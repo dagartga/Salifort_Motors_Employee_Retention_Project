@@ -60,19 +60,19 @@ with st.sidebar.form("Employee Data"):
         "Number of Projects",
         min_value=0,
         max_value=10,
-        value=5
+        value=7
     )
     average_monthly_hours = st.number_input(
         "Average Monthly Hours",
         min_value=0,
         max_value=500,
-        value=200
+        value=250
     )
     time_spend_company = st.number_input(
         "Years Spent at Salifort Motors",
         min_value=0,
         max_value=10,
-        value=5
+        value=3
     )
     promotion_last_5years = st.selectbox(
         "Promotion in Last 5 Years",
@@ -148,8 +148,8 @@ with tab2:
                               col_names[4]:time_spend_company,
                               col_names[5]:work_accident,
                               col_names[7]:promotion_last_5years,
-                            col_names[8]:department,
-                            col_names[9]:salary}])
+                              col_names[8]:department,
+                              col_names[9]:salary}])
 
     # convert yes/no to 1/0
     input_df['work_accident'] = input_df['work_accident'].apply(lambda x: 1 if x == 'Yes' else 0)
