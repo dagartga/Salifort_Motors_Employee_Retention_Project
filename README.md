@@ -1,7 +1,7 @@
 # Salifort_Motors_Employee_Retention_Project
 #### Model Use Case:
 
-This model can predict employees that are likely to leave. Then any high risk employees can be grouped into one of the three high-risk cohorts and managers can propose changes, such as a promotion or reduced hours, that may entice the employee to stay.
+This model can predict employees that are likely to leave. With this prediction, any high risk employees can be grouped into one of the three high-risk cohorts and managers can propose changes, such as a promotion or reduced hours, that may entice the employee to stay.
 
 
 #### View the Interactive Web App Here: 
