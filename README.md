@@ -43,6 +43,11 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
 | Department            | The employee's department                                          |
 | salary                | The employee's salary (U.S. dollars)                              |
 
+#### Quick Data Statistics
+- 14999 rows
+- 11991 unique rows
+- 0 missing values
+
 
 ## Project Evaluation
 
