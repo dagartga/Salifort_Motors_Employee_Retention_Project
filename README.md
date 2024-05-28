@@ -20,6 +20,9 @@ Increasing employee retention will improve the company in the following ways:
 
 The final model will predict employees that are likely to leave the company. With this prediction, any high risk employees can be flagged and managers can propose changes, such as a promotion or reduced hours, that may entice the employee to stay.
 
+#### Ethical Considerations
+When dealing with employee data, it is important to remove any demographic data that may create discriminatory bias based on a protected class. As well, it is a good idea to remove any identifiers of individuals. Since this is an experiment, it should not be applied to individuals until fully tested and verified. Looking at the dataset, I do not see any apparent ethical concerns. Personal characteristics such as race, gender, ethnicity, education, and other sensitive information is not included in the dataset.
+
 ## Web Application
 #### View the Interactive Web App Here: 
 [Salifort Motors Project Web App](https://salifort-motors-employee-retention.streamlit.app/)
