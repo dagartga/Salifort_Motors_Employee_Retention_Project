@@ -1,7 +1,24 @@
 # Salifort Motors Employee Retention Project
 #### Project Overview and Use Case:
 
-This model can predict employees that are likely to leave. With this prediction, any high risk employees can be grouped into one of the three high-risk cohorts and managers can propose changes, such as a promotion or reduced hours, that may entice the employee to stay.
+The HR department at Salifort Motors wants to take some initiatives to improve employee satisfaction levels at the company. They collected data from employees, but now they don’t know what to do with it. They refer to you as a data analytics professional and ask you to provide data-driven suggestions based on your understanding of the data. They have the following question:
+
+**What’s likely to make the employee leave the company?**
+
+The goal in this project are to analyze the data collected by the HR department and to build a model that predicts whether or not an employee will leave the company.
+
+By being able to predict how likely an employee is to leave the company, Salifort Motors can address the issues of those employees likely to leave. As well, the model can provide import insights into what are the highest drivers of attrition.
+
+Increasing employee retention will improve the company in the following ways:
+
+- No time and energy spent trying to hire a replacement
+- No training needed to get a new hire up to speed
+- No loss of specialized knowledge
+- Keep the built relationships between coworkers
+
+**Use Case**
+
+The final model will predict employees that are likely to leave the company. With this prediction, any high risk employees can be flagged and managers can propose changes, such as a promotion or reduced hours, that may entice the employee to stay.
 
 
 #### View the Interactive Web App Here: 
