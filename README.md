@@ -16,7 +16,7 @@ Increasing employee retention will improve the company in the following ways:
 - No loss of specialized knowledge
 - Keep the built relationships between coworkers
 
-**Use Case**
+### Use Case
 
 The final model will predict employees that are likely to leave the company. With this prediction, any high risk employees can be flagged and managers can propose changes, such as a promotion or reduced hours, that may entice the employee to stay.
 
