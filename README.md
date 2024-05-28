@@ -26,6 +26,8 @@ The final model will predict employees that are likely to leave the company. Wit
 
 ![Streamlit_App](./images/salifort_web_app_screenshot.png)
 
+## Data
+
 Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kaggle.com/datasets/leviiiest/salifort-motor-hr-dataset)
 
 ## Project Evaluation
