@@ -3,7 +3,7 @@
 
 The HR department at Salifort Motors wants to take some initiatives to improve employee satisfaction levels at the company. They collected survey data from employees, but now they don’t know what to do with it. They primarily they would like to answer the following question:
 
-**What’s likely to make the employee leave the company?**
+**What is likely to make the employee leave the company?**
 
 The goal in this project is to analyze the data collected by the HR department and to build a model that predicts whether or not an employee will leave the company.
 
@@ -213,3 +213,18 @@ For this case, **False Negatives are more important that False Positives**, beca
 
 ## Final Model Decision
 **The XGBoost Tuned All Features model was chosen because it had the best Recall score while also having the highest F1 score**
+
+## Conclusion
+
+The HR department of Salifort Motors conducted the employee survey with the goal of understanding **"What is likely to make an employee leave the company?"**
+
+Upon analysis, there were four main indicators
+
+The key indicators of attrition are:
+- **Average Monthly Hours**
+    - According to the feature importance from the predictive model, this feature has the **most impact** on retention and if an employee is predicted to leave then the hours of the employee should be viewed to see if they are **over-worked** and then reduce the hours if so.
+- **Combination of Features - (Over Worked High Performer)**
+    - An employee with a high score in the "over worked high performer" rating has a high likelihood of leaveing. This feature is a combination of **hours, project, satisfaction, and performance review**. A **high score** means that an employee does **lots of good work** but is **not satisfied**. If a high scoring employee is predicted to leave, then that employee should be aggressively target for retention since they add a lot of value and possibly are unhappy due to too many projects and long hours.
+- **Last Evaluation and Satisfaction Level**
+    - The importance plot shows that satisfaction level and last evaluation are main contributors to an employee leaving. There is a cohort of users who leave who have high satisfaction and a low evaluation score, so they can be identified with this combination of features.
+ 
