@@ -1,15 +1,53 @@
-# Salifort_Motors_Employee_Retention_Project
-#### Model Use Case:
+# Salifort Motors Employee Retention Project
+## Project Overview and Use Case:
 
-This model can predict employees that are likely to leave. Then any high risk employees can be grouped into one of the three high-risk cohorts and managers can propose changes, such as a promotion or reduced hours, that may entice the employee to stay.
+The HR department at Salifort Motors wants to take some initiatives to improve employee satisfaction levels at the company. They collected survey data from employees, but now they don’t know what to do with it. They primarily they would like to answer the following question:
 
+**What’s likely to make the employee leave the company?**
 
+The goal in this project is to analyze the data collected by the HR department and to build a model that predicts whether or not an employee will leave the company.
+
+By being able to predict how likely an employee is to leave the company, Salifort Motors can address the issues of those employees likely to leave. As well, the model can provide import insights into what are the highest drivers of attrition.
+
+Increasing employee retention will improve the company in the following ways:
+
+- No time and energy spent trying to hire a replacement
+- No training needed to get a new hire up to speed
+- No loss of specialized knowledge
+- Keep the built relationships between coworkers
+
+**Use Case**
+
+The final model will predict employees that are likely to leave the company. With this prediction, any high risk employees can be flagged and managers can propose changes, such as a promotion or reduced hours, that may entice the employee to stay.
+
+## Web Application
 #### View the Interactive Web App Here: 
 [Salifort Motors Project Web App](https://salifort-motors-employee-retention.streamlit.app/)
 
 ![Streamlit_App](./images/salifort_web_app_screenshot.png)
 
+## Data
+
 Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kaggle.com/datasets/leviiiest/salifort-motor-hr-dataset)
+
+| Variable              | Description                                                        |
+|-----------------------|--------------------------------------------------------------------|
+| satisfaction_level    | Employee-reported job satisfaction level [0–1]                    |
+| last_evaluation       | Score of employee's last performance review [0–1]                  |
+| number_project        | Number of projects employee contributes to                         |
+| average_monthly_hours| Average number of hours employee worked per month                  |
+| time_spend_company    | How long the employee has been with the company (years)            |
+| Work_accident         | Whether or not the employee experienced an accident while at work  |
+| left                  | Whether or not the employee left the company                       |
+| promotion_last_5years | Whether or not the employee was promoted in the last 5 years       |
+| Department            | The employee's department                                          |
+| salary                | The employee's salary (U.S. dollars)                              |
+
+#### Quick Data Statistics
+- 14999 rows
+- 11991 unique rows
+- 0 missing values
+
 
 ## Project Evaluation
 
@@ -17,7 +55,7 @@ Dataset can be downloaded from Kaggle: [Salifort Motors Dataset](https://www.kag
    -  98% for classifying Employee Churn.
 
 - **Final Model Recall:**
-   - 93% of the time, the model will correctly predict the employees who will leave.
+   - 93% of the time the model will correctly predict the employees who will leave.
  
 
 ## Exploratory Data Analysis:
