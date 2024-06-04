@@ -218,7 +218,7 @@ For this case, **False Negatives are more important that False Positives**, beca
 
 The HR department of Salifort Motors conducted the employee survey with the goal of understanding **"What is likely to make an employee leave the company?"**
 
-Upon analysis, there were **four main indicators**. 
+Upon analysis, there were four main indicators
 
 The key indicators of attrition are:
 - **Average Monthly Hours**
