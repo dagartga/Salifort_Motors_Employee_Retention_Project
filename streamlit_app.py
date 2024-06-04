@@ -60,7 +60,7 @@ with st.sidebar.form("Employee Data"):
         "Number of Projects",
         min_value=0,
         max_value=10,
-        value=6
+        value=7
     )
     average_monthly_hours = st.number_input(
         "Average Monthly Hours",
@@ -72,7 +72,7 @@ with st.sidebar.form("Employee Data"):
         "Years Spent at Salifort Motors",
         min_value=0,
         max_value=10,
-        value=3
+        value=4
     )
     promotion_last_5years = st.selectbox(
         "Promotion in Last 5 Years",
