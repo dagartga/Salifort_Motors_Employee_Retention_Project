@@ -60,7 +60,7 @@ with st.sidebar.form("Employee Data"):
         "Number of Projects",
         min_value=0,
         max_value=10,
-        value=7
+        value=6
     )
     average_monthly_hours = st.number_input(
         "Average Monthly Hours",
