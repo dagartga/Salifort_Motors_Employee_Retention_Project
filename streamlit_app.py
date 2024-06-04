@@ -40,8 +40,7 @@ with st.sidebar.form("Employee Data"):
     )
     salary = st.selectbox(
         "Salary",
-        options=df['salary'].unique(),
-        value='medium'
+        options=df['salary'].unique()
     )
     satisfacion_level = st.slider(
         "Employee Satisfaction Level",
